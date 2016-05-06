@@ -1,0 +1,241 @@
+
+/* ==========================================================================
+   Start of custom Webflow CSS
+   ========================================================================== */
+.main-nav-bar {
+    background-color: #00b6fd;
+    color: #fff;
+}
+
+.nav-menu-left {
+    float: left;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-image: url("https://daks2k3a4ib2z.cloudfront.net/56e9a4c6b4e32a4970861246/56e9a938f509295c4b4aaadc_logo1.png");
+    background-position: 0px 0px;
+    background-size: contain;
+}
+
+.nav-menu-link {
+    color: #fff;
+}
+
+.nav-menu-link:hover {
+    background-color: #fff;
+    color: #00b6fd;
+}
+
+.nav-menu-link.right {
+    float: none;
+}
+
+.top-menu-container {
+    width: 940px;
+}
+
+.body-container {
+    margin-top: 20px;
+    padding: 25px 10px;
+    border: 1px solid #00b6fd;
+}
+
+.body-h1 {
+    width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #747474;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.body-h1-span {
+    font-size: 18px;
+}
+
+.main-page-menu-item {
+    width: 150px;
+    height: auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #747474;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main-page-menu-item:hover {
+    border-color: #00b6fd;
+}
+
+.menu-item-link {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #005a7d;
+    font-size: 25px;
+    line-height: 28px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.colorwhite {
+    color: #fff;
+}
+
+.tablerowhead {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #00b6fd;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.tableth {
+    padding-bottom: 11px;
+    border-style: none none solid;
+    border-width: 1px;
+    border-color: #000 #000 #00b6fd;
+}
+
+.tabletr {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #747474;
+    -webkit-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+}
+
+.tabletr:hover {
+    background-color: #e6f8ff;
+}
+
+.footer {
+    height: 50px;
+    margin-top: 20px;
+    background-color: #00b6fd;
+}
+
+.tabletdlink {
+    color: #005a7d;
+    text-decoration: none;
+}
+
+.drommenuitem {
+    border: 1px solid #00b6fd;
+    background-color: #00b6fd;
+    color: #fff;
+}
+
+.drommenuitem:hover {
+    background-color: #fff;
+    color: #00b6fd;
+}
+
+.login-form-container {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-label {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.form-button {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.patient-container {
+    padding: 0px;
+    margin-bottom: 60px;
+}
+
+.patient-edit-sex {
+    display: block;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-radio-line {
+    display: inline-block;
+    margin-left: 9px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+}
+
+.from-patient-sex {
+    border-right: 1px solid #747474;
+    text-align: center;
+}
+
+.form-text-field {
+    display: block;
+    width: 90%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.parient-col-p {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.from-tab-content {
+    overflow: visible;
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-top: 1px none #747474;
+
+    background-color: #dfdfdf;
+}
+.from-tab-content.closed
+{
+    display: none;
+}
+
+.from-tab {
+    width: 100%;
+    height: 40px;
+    margin-top: 7px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border: 1px solid #0088BD;
+    background-color: #0088BD;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.from-tab.closed {
+    background-color: #fff;
+    color: #0088BD;
+}
+
+.form-plus {
+    display: block;
+    margin-top: -10px;
+    margin-right: 14px;
+    padding: 9px;
+    float: right;
+    cursor: pointer;
+}
+
+.form-button-arrea {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    text-align: right;
+}
+
+.click
+{
+    cursor: pointer;
+}
