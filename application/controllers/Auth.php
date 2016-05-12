@@ -89,6 +89,7 @@ class Auth extends CI_Controller {
 			$this->form_validation->set_rules('email', 'email', 'required');
 
 
+			/*если пошел валид*/
 			if ($this->form_validation->run() == true)
 			{
 
