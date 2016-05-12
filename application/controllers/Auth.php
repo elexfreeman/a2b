@@ -7,7 +7,7 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->database();
-        $this->load->library(array('ion_auth', 'form_validation', 'elex','email'));
+        $this->load->library(array('ion_auth', 'form_validation', 'elex','eemail'));
         $this->load->helper(array('url', 'language'));
 
         $this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
@@ -93,43 +93,14 @@ class Auth extends CI_Controller
                 /*Авторизуемся*/
 				if ($this->ion_auth->login($this->input->post('email'), $password)) {
 				/*Отправляем письмо об успехе*/
-                    $this->phpmailer->isSMTP();                                      // Set mailer to use SMTP
-                    $this->phpmailer->CharSet = "UTF-8";
-                    $this->phpmailer->Host = 'smtp.yandex.ru';  // Specify main and backup server
-                    $this->phpmailer->SMTPAuth = true;                               // Enable SMTP authentication
-                    $this->phpmailer->Username = 'forestunion@yandex.ru';                            // SMTP username
-                    $this->phpmailer->Password = '12QWaszx';                           // SMTP password
-                    $this->phpmailer->SMTPSecure = 'tls';
-                    // Enable encryption, 'ssl' also accepted
+                                 // Set email format to HTML
 
-                    $this->phpmailer->SMTP_PORT = 465;
-
-                    $this->phpmailer->From = 'forestunion@yandex.ru';
-                    $this->phpmailer->FromName = 'Круиз';
-#$mail->addAddress('josh@example.net', 'Josh Adams');  // Add a recipient
-                    $this->phpmailer->addAddress($email);               // Name is optional
-#$mail->addReplyTo('info@example.com', 'Information');
-                    //  $mail->addCC('elex@medlan.samara.ru');
-                    //   $mail->addBCC('elex@medlan.samara.ru');
-
-                    $this->phpmailer->WordWrap = 50;                                 // Set word wrap to 50 characters
-#$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-#$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-                    $this->phpmailer->isHTML(true);                                  // Set email format to HTML
-
-                    $this->phpmailer->Subject = 'Регистрация на сервисе доставки';
-                    $this->phpmailer->Body    = 'Спасибо за регистрацию<br>
+                    $Subject = 'Регистрация на сервисе доставки';
+                    $Body    = 'Спасибо за регистрацию<br>
 login: '.$email.'<br>
 password: '.$password.'<br>
 ';
-                    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-                    $res['error']=0;
-                    if(!$this->phpmailer->send()) {
-                        $res['error']=1;
-                        $res['error_msg']=$this->phpmailer->ErrorInfo;
-
-                    }
+                    $this->EEmail->Send($email,$Subject,$Body);
                     //if the login is successful
 					//redirect them back to the home page
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
